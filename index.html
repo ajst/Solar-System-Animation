@@ -2,27 +2,20 @@
 <html>
 <head>
 <title>Solar System</title>
-<meta charset="utf-8">  
+<meta charset="utf-8">
 <style>
     * {
   margin: 0;
   padding: 0;
     }
-    
 html{
 height: 100%;
 background: radial-gradient(ellipse at center, #000000 0%,#030a14 50%,#000000 100%);
-overflow: hidden;
+    overflow: hidden;
+
+
 }
-    
-#titre{
-color: white;
-font-size: 2em;
-opacity: 0.3;
-font-family: wass;
-position: absolute;
-transform: translateX(-50%);
-}
+
 
 .cer{
     position: absolute;
@@ -30,13 +23,13 @@ transform: translateX(-50%);
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;  
+    margin: auto;
     border-radius:100%;
 }
- 
-    
-.soleil{
-    
+
+
+.sun{
+
     width:3%;
     height: 0;
     padding-top: 3%;
@@ -47,78 +40,79 @@ transform: translateX(-50%);
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto; 
+    margin: auto;
     border-radius:100%;
     box-shadow: inset 0px 0px 11.4px 4.1px #ffaa00,
                 0px 0px 8px 2px#ffaa00;
     z-index: 2;
     transition: 5s ease ;
-    
+
 }
-    
-    
+
+
 .mercure-orbit{
     width:5%;
     height: 0;
-    padding-top: 5%; 
-     border: 1px solid rgba(255, 255, 255,0.6); 
+    padding-top: 5%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 2800ms linear infinite;
     z-index: -2;
     transition: 2s 0.2s;
-}      
-    
+}
+
 .venus-orbit{
     width:8%;
     height: 0;
-    padding-top: 8%; 
-     border: 1px solid rgba(255, 255, 255,0.6); 
+    padding-top: 8%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 7400ms linear infinite;
+    animation-direction:reverse;
     z-index: -3;
     transition: 2s 1s;
-  
-}    
-    
+
+}
+
 .earth-orbit{
     width:12%;
     height: 0;
-    padding-top: 12%; 
-     border: 1px solid rgba(255, 255, 255,0.6); 
+    padding-top: 12%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 12s linear infinite forwards;
     z-index: -4;
     transition: 2s 1.5s;
-}  
+}
 .mars-orbit{
     width:16%;
     height: 0;
-    padding-top: 16%; 
-     border: 1px solid rgba(255, 255, 255,0.6); 
+    padding-top: 16%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 22900ms linear infinite;
     z-index: -6;
     transition: 2s 2s;
-} 
+}
 .jupiter-orbit{
     width:28%;
     height: 0;
     padding-top: 28%;
-    border: 1px solid rgba(255, 255, 255,0.6);  
+    border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 260s linear infinite;
     z-index: -7;
     transition:2s 2.5s;
-} 
+}
 .saturne-orbit{
     width:40%;
     height: 0;
-    padding-top: 40%; 
-    border: 1px solid rgba(255, 255, 255,0.6); 
+    padding-top: 40%;
+    border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 649s linear infinite;
     z-index: -8;
     transition: 2s 3s;
-} 
+}
 .uranus-orbit{
     width:55%;
     height: 0;
-    padding-top: 55%; 
-     border: 1px solid rgba(255, 255, 255,0.6);  
+    padding-top: 55%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 1843s linear infinite;
     position: fixed;
     z-index: -9;
@@ -127,14 +121,14 @@ transform: translateX(-50%);
 .neptune-orbit{
     width:70%;
     height: 0;
-    padding-top: 70%; 
-     border: 1px solid rgba(255, 255, 255,0.6);  
+    padding-top: 70%;
+     border: 1px solid rgba(255, 255, 255,0.6);
     animation:rotate 40535s linear infinite;
     z-index: -10;
     transition: 2s 4s;
-    
-}     
-    
+
+}
+
 .mercure{
     width:9%;
     height: 0;
@@ -143,15 +137,15 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -4.5%;  
+    margin-left: -4.5%;
     margin-top: -4.5%;
     box-shadow:   inset -2px 0px 5px -4.2px #FFF65E,
                   inset 3px 0px 10.9px -4.2px #D87C65,
                   inset 0px 0px 5px 0.4px #D87C65
                    ;
     transition: margin 2s 0.5s ,padding 2s 0.5s,width 2s 0.5s
-    
-}    
+
+}
 .venus{
     width:10%;
     height: 0;
@@ -160,15 +154,15 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -5%;  
+    margin-left: -5%;
     margin-top: -5%;
     box-shadow:   inset -1px 0px 1px 0.2px #FFF65E,
                   inset 3px 0px 10.9px -4.2px #C62700,
                   inset 0px 0px 5px 0.4px #821A00
                    ;
     transition: margin 2s 1s, padding 2s 1s, width 2s 1s;
-    
-}    
+
+}
  .earth{
     width:8%;
     height: 0;
@@ -177,34 +171,34 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -4%;  
+    margin-left: -4%;
     margin-top: -4%;
     box-shadow:   inset -4px 0px 5px -4.2px #FFF65E,
                   inset 3px 0px 10.9px -4.2px #0027EF,
                   inset 0px 0px 5px 0.4px #00CC0D
-                 
+
                    ;
     opacity:1;
      z-index: -9;
      transition: width 2s 1.5s, margin 2s 1.5s, padding 2s 1.5s;
-    
+
 }
 .moon-orbit{
   width:16%;
     height: 0;
     padding-top:16%;
-    
+
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -8%;  
+    margin-left: -8%;
     margin-top: -8%;
     box-shadow:0 0 0px 1px rgba(255, 255, 255,0.4) inset;
     animation:rotate 1s linear infinite;
     z-index: -10;
     transition: width 2s 1.5s, margin 2s 1.5s, padding 2s 1.5s;
-    
-    
+
+
 }
 .moon{
     width:20%;
@@ -214,11 +208,11 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -10%;  
+    margin-left: -10%;
     margin-top: -10%;
    transition: width 2s 2s, margin 2s 2s, padding 2s 2s;
-    
-    
+
+
 }
 .mars{
     width:4%;
@@ -228,18 +222,18 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -2%;  
+    margin-left: -2%;
     margin-top: -2%;
     box-shadow:   inset -2px 0px 5px -4.2px #FFF65E,
                   inset 3px 0px 10.9px -4.2px #DBB657,
                   inset 0px 0px 5px 0.4px #DBB657
-            
+
                    ;
     transition: width 2s 2s,padding 2s 2s,margin 2s 2s;
-    
-} 
+
+}
 .jupiter{
-   
+
     width:20%;
     height: 0;
     padding-top:20%;
@@ -247,19 +241,19 @@ transform: translateX(-50%);
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -10%;  
+    margin-left: -10%;
     margin-top: -10%;
-   
+
     box-shadow:   inset -4px 0px 5px 0px #E7E8BB,
                     inset 2px 0px 20px 0px black
-                  
-        
+
+
                    ;
     background: linear-gradient(20deg, rgba(219,198,184,1) 0%, rgba(194,166,142,1) 10%, rgba(168,117,72,1) 18%, rgba(148,146,145,1) 32%, rgba(130,88,56,1) 46%, rgba(209,209,209,1) 60%, rgba(125,105,80,1) 76%, rgba(179,176,166,1) 89%, rgba(153,130,90,1) 100%);
 
 z-index: 999999;
     transition:padding 2s 2.5s, width 2s 2.5s,margin 2s 2.5s;
-} 
+}
 .saturne{
     width:10%;
     height: 0;
@@ -268,7 +262,7 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -5%;  
+    margin-left: -5%;
     margin-top: -5%;
     box-shadow:   inset -4px 0px 4px 0px #E7E8BB,
                   inset 2px 0px 20px 0px black
@@ -276,8 +270,8 @@ z-index: 999999;
     background: linear-gradient(to bottom, #f2f0d2 0%,#bfb18d 16%,#d1c7ad 22%,#e0ce76 33%,#e5c56b 44%,#ead9ad 53%,#ddcd7e 67%,#d1c7ad 77%,#efdeb1 90%,#eddf93 100%);
 
  transition: width 2s 3s,padding 2s 3s,margin 2s 3s;
-       
-}  
+
+}
 .centure{
     width:13%;
     height: 0;
@@ -285,13 +279,13 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -6.5%;  
+    margin-left: -6.5%;
     margin-top: -6.5%;
     box-shadow: 0 0 0 6px #eddf93 inset;
     opacity: 0.3;
     z-index: -3;
         transition: width 2s 3.1s,margin 2s 3.1s,padding 2s 3.1s;
- } 
+ }
 .centure1{
     width:14%;
     height: 0;
@@ -299,7 +293,7 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -7%;  
+    margin-left: -7%;
     margin-top: -7%;
     box-shadow: 0 0 0 2px #eddf93 inset;
     opacity: 0.2;
@@ -313,7 +307,7 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -7.5%;  
+    margin-left: -7.5%;
     margin-top: -7.5%;
     box-shadow: 0 0 0 1px #eddf93 inset;
     opacity: 0.3;
@@ -328,16 +322,16 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -2.5%;  
-    margin-top: -2.5%; 
-    box-shadow:     
+    margin-left: -2.5%;
+    margin-top: -2.5%;
+    box-shadow:
                     inset -4px 0px 4px 0px #E7E8BB,
                     inset 3px 0px 10.9px -4.2px midnightblue
-                    
-                    
-             
+
+
+
                    ;
-    background: linear-gradient(45deg, #b3dced 0%,#29b8e5 43%,#29b8e5 48%,#29b8e5 53%,#c1f2ff 85%,#86d7ef 96%,#bce0ee 100%); 
+    background: linear-gradient(45deg, #b3dced 0%,#29b8e5 43%,#29b8e5 48%,#29b8e5 53%,#c1f2ff 85%,#86d7ef 96%,#bce0ee 100%);
     transition: width 2s 3.8s,padding 2s 3.8s,margin 2s 3.8s;
 }
 .neptune{
@@ -348,20 +342,20 @@ z-index: 999999;
     border-radius: 100%;
     position: absolute;
     top:50%;
-    margin-left: -2%;  
+    margin-left: -2%;
     margin-top: -2%;
     box-shadow:     inset -2px 0px 2px 0px #E7E8BB,
                     inset 3px 0px 10.9px -4.2px midnightblue
-                    
-            
+
+
                    ;
-     
+
     background: linear-gradient(10deg, #1e5799 0%,#2989d8 47%,#5197d1 56%,#a5bed3 59%,#5197d1 62%,#207cca 85%,#7db9e8 100%);
     transition: width 1s 4.3s,padding 2s 4.3s,margin 2s 4.3s;
-    
-}     
-    
-    
+
+}
+
+
 .fix{
 animation:none !important;
 }
@@ -369,14 +363,14 @@ animation:none !important;
 border:none;
 
 }
-    
+
 @keyframes rotate {
-    
+
     from{}
     to{transform: rotateZ(-360deg);}
-    
+
 }
- 
+
 .stars{
    width:0.15%;
     height: 0;
@@ -387,33 +381,28 @@ border:none;
      z-index: -20;
     position: absolute;
 
-}  
+}
 #S{
     background-color: red;
-font-family:wass;    
-font-size:300% ; 
+font-family:wass;
+font-size:300% ;
 position:absolute;
 color:white;
    left: 50%;
     transform: translateX(-50%);
         opacity:0.7
 }
-    
-.para{   
- font-family: wass;   
-  
-}
 @font-face{
  font-family:wass;
  src: url("AGENCYB.ttf");
-    
+
 }
-.p{        
-  animation-play-state: paused;      
+.p{
+  animation-play-state: paused;
     }
-.r{        
-  animation-play-state: ;      
-    } 
+.r{
+  animation-play-state: ;
+    }
 .stop{
 position: absolute;
 width: 8%;
@@ -421,20 +410,20 @@ top: 50%;
 height: 67px;
 background-color: red;
 opacity: 0.5;
-margin-left: -7%;   
+margin-left: -7%;
 transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 3000;
-    
+
 }
 .stop:hover{
-opacity: 0.7;   
-margin-left: -3%;     
+opacity: 0.7;
+margin-left: -3%;
 }
 
 }
 #N{
 width:100%;
-height:30px;   
+height:30px;
 margin-top: 10%;
 position:absolute;
 
@@ -446,11 +435,11 @@ position:absolute;
  bottom:0;
     right:0;
 margin-bottom: 1%;
-margin-right: 40%;    
-    
+margin-right: 40%;
+
     z-index: 3333;
-    opacity:0.4;   
-    
+    opacity:0.4;
+
 }
 #ee{
    position: absolute;
@@ -459,21 +448,21 @@ margin-right: 40%;
  bottom:0;
     right:0;
 margin-bottom: 10%;
-margin-right: -5%;    
-transform: rotateZ(90deg);    
+margin-right: -5%;
+transform: rotateZ(90deg);
     z-index: 3333;
     opacity:0.4;
-   
+
 }
 
-      
-    
+
+
 input[type=range]{
     -webkit-appearance: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  
+
     height: 16px;
     background: white;
     border:none;
@@ -481,17 +470,17 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    
+
     height: 100%;
     width: 20%;
-   
+
     border:none;
     background: red;
-    
 
-    
-    
-    
+
+
+
+
 }
 
 input[type=range]:focus {
@@ -500,53 +489,53 @@ input[type=range]:focus {
 
 input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ccc;
-    
-} 
-    
+
+}
+
 #ee:hover{
-  opacity:0.8;   
-}  
+  opacity:0.8;
+}
 #dd:hover{
-  opacity:0.8;   
-}  
+  opacity:0.8;
+}
 u{
- color: red;  
+ color: red;
     font-size: 1.5em;
-    
+
 }
 #space{
-    
+
  transform: scale(1);
 transform-origin: 50% 50%;
     transition: 1s;
-    
-    
+
+
 }
 .display{
     position: absolute;
     top:0;
     right: 0;
-    font-size: 3em;
-    color:white; 
+    font-size: 1.5em;
+    color:white;
     margin-right: 3%;
     margin-top: 3%;
     transition: 2s;
     font-family: wass;
-    
+
 }
     .display2{
     position: absolute;
     top:0;
     left: 0;
     font-size: 1.1em;
-    color:white; 
+    color:white;
     margin-left: 1%;
     margin-top: 1%;
     transition: 2s;
     font-family: wass;
-    opacity: 0.7;    
+    opacity: 0.7;
         z-index: 555;
-    
+
 }
    .display3{
     position: absolute;
@@ -554,34 +543,34 @@ transform-origin: 50% 50%;
     top: 0;
     right:4%;
        top:20%;
-       
+
     z-index: 3333;
-    opacity:0.5; 
+    opacity:0.5;
     font-family: wass;
        color:white;
-       font-size: 2.5em; 
-       
+       font-size: 2.5em;
+
    }
     .dis3{
-       animation: rr 3s forwards ;   
- 
+       animation: rr 3s forwards ;
+
     }
-    
+
     @keyframes rr{
         0%{opacity:0;}
         10%{opacity:0.6;}
         100%{opacity:0;}
-        
+
     }
 
 @media screen and ( max-width:900px){
  .display2{
-  display: none;   
+  display: none;
  }
 
-    
+
 }
-    
+
 #t{
 
     width:100%;
@@ -589,7 +578,7 @@ transform-origin: 50% 50%;
     font-family: dd;
     font-size: 3em;
     cursor: pointer;
-       
+
 }
 #pp{
   position: absolute;
@@ -599,7 +588,7 @@ transform-origin: 50% 50%;
     transform: translateX(-10%);
     color: white;
 
-    
+
 }
     #q{
   position: absolute;
@@ -608,16 +597,16 @@ transform-origin: 50% 50%;
     left: 50%;
     transform: translateX(-10%);
     color: white;
-     
 
-    
+
+
 }
 
 input[type=text]{
  left:0;
     bottom: 0;
     position: absolute;
-   margin-bottom: 1%; 
+   margin-bottom: 1%;
    margin-left: 6%;
     width:8%;
     height: 7%;
@@ -627,76 +616,76 @@ input[type=text]{
     font-size: 1.5em;
     text-align:center;
         color:red;
-    
+
 }
     input[type=text]:hover{
  opacity: 0.8;
-    
+
 }
         input[type=text]:hover ~ #kg{
  opacity: 0.8;
-    
+
 }
     #kg{
-        
+
     left:0;
     bottom: 0;
     position: absolute;
-   margin-bottom: 1.5%; 
+   margin-bottom: 1.5%;
    margin-left:14.5%;
-    
+
     font-family: wass;
     font-size: 1.5em;
     text-align:center;
-        color:white;  
+        color:white;
         opacity: 0.4
-        
+
     }
-            
+
     @font-face{
      font-family:dd;
-     src:url('heydings_controls.ttf') 
-        
-        
+     src:url('heydings_controls.ttf')
+
+
     }
-</style>   
+</style>
 <script>
-    
+
 function star(){
-var SC=["white","skyblue","wheat"];  
+var SC=["white","skyblue","wheat"];
 var value=Math.floor((Math.random() * 2000) + 1) +"px "+ Math.floor((Math.random() * 2000) + 1)+"px " + "white "
- 
+
     for(var i=1;i<15000;i++){
-     value=value+ " ," +Math.floor((Math.random() * 2000) + 1) +"px "+ Math.floor((Math.random() * 2000) + 1)+"px " + Math.floor((Math.random() * 3) + 0) +"px " + Math.floor((Math.random() * 0.5) + 0) + "px "+ SC[Math.floor((Math.random() * 3) + 0)]    
-    }    
-document.getElementById("D").setAttribute("style", "opacity:0.7;box-shadow:"+value ) ;  
+     value=value+ " ," +Math.floor((Math.random() * 2000) + 1) +"px "+ Math.floor((Math.random() * 2000) + 1)+"px " + Math.floor((Math.random() * 3) + 0) +"px " + Math.floor((Math.random() * 0.5) + 0) + "px "+ SC[Math.floor((Math.random() * 3) + 0)]
+    }
+document.getElementById("D").setAttribute("style", "opacity:0.7;box-shadow:"+value ) ;
 }
-    
+
 function stop(){
     if(document.getElementById("q").innerHTML=="u")
 document.getElementById("q").innerHTML="P";
     else
         document.getElementById("q").innerHTML="u";
 
-document.getElementById('p').classList.toggle("p");     
-document.getElementById('p1').classList.toggle("p");     
-document.getElementById('p2').classList.toggle("p");     
-document.getElementById('p3').classList.toggle("p");     
-document.getElementById('p4').classList.toggle("p");     
-document.getElementById('p5').classList.toggle("p");     
-document.getElementById('p6').classList.toggle("p");     
-document.getElementById('p7').classList.toggle("p");     
-document.getElementById('p8').classList.toggle("p");     
+document.getElementById('p').classList.toggle("p");
+document.getElementById('p1').classList.toggle("p");
+document.getElementById('p2').classList.toggle("p");
+document.getElementById('p3').classList.toggle("p");
+document.getElementById('p4').classList.toggle("p");
+document.getElementById('p5').classList.toggle("p");
+document.getElementById('p6').classList.toggle("p");
+document.getElementById('p7').classList.toggle("p");
+document.getElementById('p8').classList.toggle("p");
 
-}   
+}
 function scale(value){
 value=parseInt(value);
     if(value==8){
-         document.getElementById('lll').innerHTML="<span>échelle :<span> <br> X0.7"; 
+         document.getElementById('lll').innerHTML="<span>échelle :<span> <br> X0.7";
     }
     else{
          document.getElementById('lll').innerHTML="<span>échelle :<span> <br> X"+Math.abs(value-8);}
-      
+
 switch(value) {
  case 1:
  document.getElementById("space").style.webkitTransform = "scale(4)";
@@ -712,40 +701,40 @@ document.getElementById("space").style.webkitTransform = "scale(1.5)";
  break;
  case 5:
 document.getElementById("space").style.webkitTransform = "scale(1.3)";
- break;        
+ break;
  case 6:
 document.getElementById("space").style.webkitTransform = "scale(1.2)";
- break; 
+ break;
 case 7:
 document.getElementById("space").style.webkitTransform = "scale(1)";
- break; 
+ break;
  default : document.getElementById("space").style.webkitTransform= "scale(0.7)";
 }
-document.getElementById('lll').classList.add("dis3");     
+document.getElementById('lll').classList.add("dis3");
 }
 
 function display(e){
-        
-       var tab=["ddd","soleil","mercure","venus","earth","mars","jupiter","saturne","uranus","neptune"];
+
+       var tab=["ddd","sun","mercure","venus","earth","mars","jupiter","saturne","uranus","neptune"];
        var tab1=[1,27.96,0.38,0.9,1,0.38,2.53,1.07,0.92,1.12]
        var p=document.getElementById("po").value;
      for (var i in tab) {
         if(e.target == document.querySelector("."+tab[i])){
-            
-    document.getElementById('ll').innerHTML=tab[i]; 
+
+    document.getElementById('ll').innerHTML=tab[i];
             if(!isNaN(p) && p>0){
             var k= tab1[i]*p;
                 if (k <1000)
-             document.getElementById('ll').innerHTML+="<p style='font-size:0.5em'>Vous pesez :"+k.toFixed(2)+" kg</p>"; 
+             document.getElementById('ll').innerHTML+="<br>Vous pesez :"+k.toFixed(2)+" kg";
                 else
-                 document.getElementById('ll').innerHTML+="<p style='font-size:0.5em'>Vous pesez :"+(k/1000).toFixed(2)+" tonnes</p>";
+                 document.getElementById('ll').innerHTML+="<br>Vous pesez :"+(k/1000).toFixed(2)+" tonnes";
             }
-     
-                        
+
+
                         e.target.style.border="2px solid orangered";
- 
-            
-           break; 
+
+
+           break;
         }
     else if(e.target != document.querySelector("."+tab[i]))
     {
@@ -755,12 +744,12 @@ function display(e){
         }
     }
     }
-    
+
     }
 function slow(val)
     {
-        
-        
+
+
         var tab1=["Mercure","Venus","Terre","Lune","Mars","Jupiter","Saturne","Uranus","Neptune"];
         var tab=[2.8,7.4,12,1,22.9,260,649,1843,40535]
         var ta=["p","p1","p2","p3","p4","p5","p6","p7","p8"]
@@ -768,302 +757,205 @@ function slow(val)
         document.getElementById('l').innerHTML="<u>Période de révolution :</u><br>1 an = "+tab[2]*Math.abs(val-50)+"s <br><br>";
         }
         else{
-            
-                  document.getElementById('l').innerHTML="<u>Période de révolution :</u><br>1 an = "+(tab[2]*1/(Math.abs(val-48))).toFixed(2)+"s <br><br>";  
-            
+
+                  document.getElementById('l').innerHTML="<u>Période de révolution :</u><br>1 an = "+(tab[2]*1/(Math.abs(val-48))).toFixed(2)+"s <br><br>";
+
         }
         if(val<50){
        for (var i in tab){
            var s=tab[i]* Math.abs(val-50);
       document.getElementById(ta[i]).style.animationDuration =s+"s";
             var se = ((s%3600)%60).toFixed(0);
-           
+
            var mm = Math.abs((((s-se)/60)%60).toFixed(0));
-           
-           var h =  Math.abs(((s-se-mm*60)/3600).toFixed(0));   
-           
+
+           var h =  Math.abs(((s-se-mm*60)/3600).toFixed(0));
+
             document.getElementById('l').innerHTML+= tab1[i] +" : "+h+"h ";
             document.getElementById('l').innerHTML+= +mm+"min";
-            document.getElementById('l').innerHTML+= " "+se+"s <br>";     
+            document.getElementById('l').innerHTML+= " "+se+"s <br>";
             if (Math.abs(val-50)>1)
                     document.getElementById('lll').innerHTML="<span>vitesse :<span> <br> X"+ (1/Math.abs(val-50)).toFixed(2);
            else
                                    document.getElementById('lll').innerHTML="<span>vitesse :<span> <br> X1";
-           
 
-           } 
-        }   
-            
+
+           }
+        }
+
         else{
-            val=val-48;  
+            val=val-48;
        for (var i in tab){
            var s=tab[i]/val;
-           
+
       document.getElementById(ta[i]).style.animationDuration =s+"s";
 
            var se = ((s%3600)%60).toFixed(0);
-           
+
            var mm = Math.abs((((s-se)/60)%60).toFixed(0));
-           
-           var h =  Math.abs(((s-se-mm*60)/3600).toFixed(0));   
-           
+
+           var h =  Math.abs(((s-se-mm*60)/3600).toFixed(0));
+
             document.getElementById('l').innerHTML+= tab1[i] +" : "+h+"h ";
             document.getElementById('l').innerHTML+= +mm+"min";
-            document.getElementById('l').innerHTML+= " "+se+"s <br>"; 
+            document.getElementById('l').innerHTML+= " "+se+"s <br>";
            document.getElementById('lll').innerHTML="<span>vitesse :<span> <br> X"+val;
-             
-            
-           
+
+
+
         }
- 
-        
-       
+
+
+
         }
-                 
-            
-       document.getElementById('lll').classList.add("dis3");  
+
+
+       document.getElementById('lll').classList.add("dis3");
     }
     function up(){
-     document.getElementById('lll').classList.add("dis3");   
-        
-    } 
-    function cli(){
-    document.getElementById('lll').classList.remove("dis3");  
-        
+     document.getElementById('lll').classList.add("dis3");
+
     }
-</script>  
+    function cli(){
+    document.getElementById('lll').classList.remove("dis3");
+
+    }
+</script>
     <script>
         function real(value){
-            
+
     var width=[
         [20,22,23,24.5,25.7,34,43,57,75],
         ["p10","p","p1","p2","p4","p5","p6","p7","p8"],
-        ["soleil","mercure-orbit","venus-orbit","earth-orbit","mars-orbit","jupiter-orbit","saturne-orbit","uranus-orbit","neptune-orbit"],
+        ["sun","mercure-orbit","venus-orbit","earth-orbit","mars-orbit","jupiter-orbit","saturne-orbit","uranus-orbit","neptune-orbit"],
         [3,5,8,12,16,28,40,55,70]
-        
+
         ];
      var orbit=[
         [1,1.6,1.6,2.2,1.4,7,4,3,2.4,6,7,8],
         ["mercure","venus","earth","moon-orbit","mars","jupiter","saturne","uranus","neptune","centure","centure1","centure2"] ,
-        [9,10,8,16,4,20,10,5,4,13,14,15] 
-        ];        
-            
-    if (document.getElementById("t").value!="s"){        
+        [9,10,8,16,4,20,10,5,4,13,14,15]
+        ];
+
+    if (document.getElementById("t").value!="s"){
         for(var i =0;i<9;i++){
             document.getElementById(width[1][i]).style.width=width[0][i]+"%";
-            document.getElementById(width[1][i]).style.paddingTop=width[0][i]+"%";   
+            document.getElementById(width[1][i]).style.paddingTop=width[0][i]+"%";
              document.querySelector("."+width[2][i]).style.width=width[0][i]+"%";
             document.querySelector("."+width[2][i]).style.paddingTop=width[0][i]+"%";
         }
-            
+
               for(var j =0;j<12;j++){
             document.querySelector("."+orbit[1][j]).style.width=orbit[0][j]+"%";
-            document.querySelector("."+orbit[1][j]).style.paddingTop=orbit[0][j]+"%";       
-            document.querySelector("."+orbit[1][j]).style.marginLeft=-orbit[0][j]/2+"%";       
-            document.querySelector("."+orbit[1][j]).style.marginTop=-orbit[0][j]/2+"%";       
+            document.querySelector("."+orbit[1][j]).style.paddingTop=orbit[0][j]+"%";
+            document.querySelector("."+orbit[1][j]).style.marginLeft=-orbit[0][j]/2+"%";
+            document.querySelector("."+orbit[1][j]).style.marginTop=-orbit[0][j]/2+"%";
         }
-            
-      document.getElementById("p3").style.width="2.2%";        
+
+      document.getElementById("p3").style.width="2.2%";
       document.getElementById("p3").style.paddingTop="2.2%";
       document.getElementById("p3").style.marginTop="-1.1%";
       document.getElementById("p3").style.marginLeft="-1.1%";
        document.getElementById("p10").style.boxShadow="0px 0px 40px 2px #ffaa00,inset 0px 0px 80.4px 30.1px #ffaa00";
-        
-     
+
+
         document.getElementById("t").value="s";
     }
-            
+
     else{
         for(var i =0;i<9;i++){
             document.getElementById(width[1][i]).style.width=width[3][i]+"%";
-            document.getElementById(width[1][i]).style.paddingTop=width[3][i]+"%";   
+            document.getElementById(width[1][i]).style.paddingTop=width[3][i]+"%";
              document.querySelector("."+width[2][i]).style.width=width[3][i]+"%";
             document.querySelector("."+width[2][i]).style.paddingTop=width[3][i]+"%";
         }
-            
+
               for(var j =0;j<12;j++){
             document.querySelector("."+orbit[1][j]).style.width=orbit[2][j]+"%";
-            document.querySelector("."+orbit[1][j]).style.paddingTop=orbit[2][j]+"%";       
-            document.querySelector("."+orbit[1][j]).style.marginLeft=-orbit[2][j]/2+"%";       
-            document.querySelector("."+orbit[1][j]).style.marginTop=-orbit[2][j]/2+"%";       
+            document.querySelector("."+orbit[1][j]).style.paddingTop=orbit[2][j]+"%";
+            document.querySelector("."+orbit[1][j]).style.marginLeft=-orbit[2][j]/2+"%";
+            document.querySelector("."+orbit[1][j]).style.marginTop=-orbit[2][j]/2+"%";
         }
-            
-      document.getElementById("p3").style.width="16%";        
+
+      document.getElementById("p3").style.width="16%";
       document.getElementById("p3").style.paddingTop="16%";
       document.getElementById("p3").style.marginTop="-8%";
       document.getElementById("p3").style.marginLeft="-8%";
-      document.getElementById("p10").style.boxShadow="0px 0px 8px 2px #ffaa00,inset 0px 0px 11.4px 4.1px #ffaa00";     
-         
+      document.getElementById("p10").style.boxShadow="0px 0px 8px 2px #ffaa00,inset 0px 0px 11.4px 4.1px #ffaa00";
+
      document.getElementById("t").value="m";
-     
-    }        
-            
+
     }
-        
-    
-    
+
+    }
+
+
+
     </script>
 
-
 </head >
- <header><center><b id="titre" >Club Jeune Science | AJST </b></center></header>   
 <body onload="star();document.getElementById('ee').value=7;document.getElementById('dd').value=49;slow(49)"   onclick="display(event)" onclick="pos(event)" >
-    <div class="stars" id="D"></div> 
-<div class="display" id="ll"></div>    
-<div class="display2" id="l"></div>    
+    <div class="stars" id="D"></div>
+<div class="display" id="ll"></div>
+<div class="display2" id="l"></div>
 <div class="ddd" style="display:none" ></div>
-<div id="kk">
-    
-<div  class="stop" style="top:62%"> 
-    <div id="t"  class="waves-effect waves-light" onclick="real()" value="m"><p id="pp">V</p></div>
-   
+<div  class="stop" style="top:62%">
+    <div id="t"  onclick="real()" value="m"><p id="pp">V</p></div>
 </div>
-<div  class="stop">  
-    <div id="t" onclick="stop()"  class="waves-effect waves-light" value="m"><p  id="q">u</p></div>
+<div  class="stop">
+    <div id="t" onclick="stop()" value="m"><p  id="q">u</p></div>
 </div>
-</div> 
-    
+
     <div class="display3" id="lll"></div>
 <input type="range" min="1" max="100" id="dd" onchange="slow(this.value);up()" onmousemove="up()" onclick="cli()" >
 <input type="text" placeholder="vous pesez" id="po">
     <p id="kg">kg</p>
-<input type="range" min="1" max="8" id="ee" onchange="scale(this.value)" onmouseover="stop();" onmouseout="stop()"   onmousemove="up()" onclick="cli()"> 
+<input type="range" min="1" max="8" id="ee" onchange="scale(this.value)" onmouseover="stop();" onmouseout="stop()"   onmousemove="up()" onclick="cli()">
  <div id="space" class="cer">
-          
-<link rel="stylesheet" type="text/css" media="all" href="jquery.cosyModal.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.cosyModal.js"></script> 
-     
-     <a href="javascript:void(0);" ondblclick="$('#modal-4').cosyModal('show');"><div class="soleil" id="p10"></div></a>
-		<div class="para" id="modal-4">
-			<h1>Le soleil</h1>
-			<p>Le Soleil est l’étoile du Système solaire. Dans la classification astronomique, c’est une étoile de type naine jaune, composée d’hydrogène (75 % de la masse ou 92 % du volume) et d’hélium (25 % de la masse ou 8 % du volume). Autour de lui gravitent la Terre (à la vitesse de 30 km/s), sept autres planètes, au moins cinq planètes naines, de très nombreux astéroïdes et comètes et une bande de poussière. Le Soleil représente à lui seul 99,86 % de la masse du Système solaire ainsi constitué, Jupiter représentant plus des deux tiers du reste.</p>
-            <center><img src="sun.gif"></img></center>
-		</div>
-		<script type="text/javascript">
-		$('#modal-4').cosyModal();
-		</script>
+<div class="sun" id="p10"></div>
+
 <div class="cer mercure-orbit fix"></div>
 <div class="cer mercure-orbit op" id="p">
-    <a href="javascript:void(0);" ondblclick="$('#modal-1').cosyModal('show');"><div class="mercure" id="gf"></div></a> 
-<div class="para" id="modal-1">
-			<h1>Mercure</h1>
-			<p>Mercure est la planète la plus proche du Soleil et la moins massive du Système solaire. Son éloignement au Soleil est compris entre 0,3075 et 0,4667 UA, ce qui correspond à une excentricité orbitale de 0,2056 — plus de douze fois supérieure à celle de la Terre, et de loin la plus élevée pour une planète du système solaire. Elle est visible à l'œil nu depuis la Terre avec un diamètre apparent de 4,5 à 13 secondes d'arc, et une magnitude apparente de 5,7 à -2,3 ; son observation est toutefois rendue difficile par son élongation toujours inférieure à 28,3° qui la noie le plus souvent dans l'éclat du Soleil.</p>
-        </br> <center><img src="mercure.gif" width="80%"></img></center>
-		</div>
-		<script type="text/javascript">
-		$('#modal-1').cosyModal();
-		</script>    
+    <div class="mercure" id="gf"></div>
 </div>
-<div class="stars" id="D"></div>     
+<div class="stars" id="D"></div>
 <div class="cer venus-orbit fix"></div>
 <div class="cer venus-orbit op" id="p1">
-<a href="javascript:void(0);" ondblclick="$('#modal-5').cosyModal('show');"><div class="venus"></div></a>    
-<div class="para" id="modal-5">
-			<h1>venus</h1>
-			<p>Vénus est une des quatre planètes telluriques du Système solaire. Elle est la deuxième planète par ordre d'éloignement au Soleil, et la sixième par masse ou par taille décroissantes.</p>
-            <center><img src="venus.gif" width="100%"></img></center>
-		</div>
-<script type="text/javascript">
-$('#modal-5').cosyModal();
-</script>
- </div>
-<div class="cer earth-orbit fix"></div>    
+    <div class="venus"></div>
+</div>
+<div class="cer earth-orbit fix"></div>
 <div class="cer earth-orbit op" id="p2">
-<a href="javascript:void(0);" ondblclick="$('#modal-6').cosyModal('show');"><div class="earth"></div></a>
-    
-<div class="para" id="modal-6">
-			<h1>La terre</h1>
-			<p>La Terre est une planète du Système solaire, la troisième au regard de la distance au Soleil. Il s'agit de la cinquième planète la plus grande, tant en taille qu'en masse, dans le Système solaire et la plus massive des planètes telluriques de ce système planétaire.</p>
-            <center><img src="earth.gif" width="90%"></img></center>
-		</div>
-<script type="text/javascript">
-$('#modal-6').cosyModal();
-</script>
-
+    <div class="earth"></div>
     <div class="moon-orbit fix"></div>
     <div class="moon-orbit op" id="p3">
         <div class="moon"></div>
-    </div>    
+    </div>
 </div>
 <div class="cer mars-orbit fix"></div>
 <div class="cer mars-orbit op" id="p4">
-<a href="javascript:void(0);" ondblclick="$('#modal-7').cosyModal('show');"> <div class="mars"></div></a>   <div class="para" id="modal-7">
-			<h1>Mars</h1>
-			<p>Mars est la quatrième planète par ordre de distance croissante au Soleil et la deuxième par masse et par taille croissantes sur les huit planètes que compte le Système solaire. Son éloignement au Soleil est compris entre 1,381 et 1,666 UA (206,6 à 249,2 millions de km), avec une période orbitale de 686,71 jours terrestres.</p>
-         </br>   <center><img src="mars.gif" width="70%"></img></center>
-</br> 
-		</div>
-<script type="text/javascript">
-$('#modal-7').cosyModal();
-</script>
-    
-</div> 
+    <div class="mars"></div>
+</div>
 <div class="cer jupiter-orbit fix"></div>
 <div class="cer jupiter-orbit op" id="p5">
-<a href="javascript:void(0);" ondblclick="$('#modal-8').cosyModal('show');"><div class="jupiter" ></div></a>
-<div class="para" id="modal-8">
-			<h1>Jupiter</h1>
-   	<p>Jupiter est une planète géante gazeuse. Il s'agit de la plus grosse planète du Système solaire, plus volumineuse et massive que toutes les autres planètes réunies, et la cinquième planète par sa distance au Soleil (après Mercure, Vénus, la Terre et Mars). Jupiter est ainsi officiellement désignée, en français comme en anglais, d'après le dieu romain Jupiter, assimilé au dieu grec Zeus.</p>
-     </br>
-            <center><img src="jupiter.gif" width="60%"></img></center>
-</br>
-		</div>
-<script type="text/javascript">
-$('#modal-8').cosyModal();
-</script>    
-    
+    <div class="jupiter" ></div>
 </div>
-     
+
 <div class="cer saturne-orbit fix"></div>
 <div class="cer saturne-orbit op" id="p6">
-<a href="javascript:void(0);" ondblclick="$('#modal-9').cosyModal('show');"><div class="saturne"></div></a>
-<div class="para" id="modal-9">
-			<h1>Saturne</h1>
-			<p>Saturne est la sixième planète du Système solaire par ordre de distance au Soleil et la deuxième après Jupiter tant par sa taille que par sa masse.
-    </br>
-    Saturne est une planète géante, au même titre que Jupiter, Uranus et Neptune, et plus précisément une géante gazeuse de type Jupiter froid comme Jupiter. D'un diamètre d'environ neuf fois et demi celui de la Terre, elle est majoritairement composée d'hydrogène et d'hélium. Sa masse vaut 95 fois celle de la Terre et son volume 900 fois celui de notre planète. Sa période de révolution est d'environ 29 ans.
-    </p>
-
-</br></br> <center><img src="saturne.gif"  width="80%"></img></center>
-</br></br>
-		</div>
-<script type="text/javascript">
-$('#modal-9').cosyModal();
-</script>        
-    <div class="centure "></div> 
-    <div class="centure1"></div> 
-    <div class="centure2 "></div>   
-</div> 
+    <div class="saturne"></div>
+    <div class="centure "></div>
+    <div class="centure1"></div>
+    <div class="centure2 "></div>
+</div>
 <div class="cer uranus-orbit fix"></div>
 <div class="cer uranus-orbit op" id="p7">
-    <a href="javascript:void(0);" ondblclick="$('#modal-0').cosyModal('show');"><div class="uranus" style="z-index:444"></div></a>  
-<div class="para" id="modal-0">
-			<h1>Uranus</h1>
-			<p>Uranus est une planète géante de glaces de type Neptune froid. Il s'agit de la 7éme planète du Système solaire par sa distance au Soleil, de la 3éme par la taille et de la 4éme par la masse. Elle doit son nom à la divinité romaine du ciel, Uranus, père de Saturne et grand-père de Jupiter. Uranus est la première planète découverte à l’époque moderne. Bien qu'elle soit visible à l’œil nu comme les cinq planètes déjà connues, son caractère planétaire ne fut pas identifié en raison de son très faible éclat, étant à la limite de la visibilité et de son déplacement apparent très lent.</p>
-           </br> <center><img src="uranus.gif"  ></img></center>
-		</div>
-<script type="text/javascript">
-$('#modal-0').cosyModal();
-</script>            
-    
+    <div class="uranus" style="z-index:444"></div>
 </div>
 <div class="cer neptune-orbit fix" ></div>
 <div class="cer neptune-orbit op" id="p8">
-<a href="javascript:void(0);" ondblclick="$('#modal-3').cosyModal('show');"><div class="neptune"></div></a>  <div class="para" id="modal-3">
-			<h1>Neptune</h1>
-			<p>Neptune est la huitième et dernière planète du Système solaire par distance croissante au Soleil.
-</br>
-Neptune orbite autour du Soleil à une distance d'environ 30 UA avec une excentricité orbitale moitié moindre que celle de la Terre en bouclant une révolution complète en 164,79 ans. C'est la troisième planète du Système solaire par masse décroissante — elle est 17 fois plus massive que la Terre et 19 fois moins massive que Jupiter — et la quatrième par taille décroissante ; Neptune est en effet à la fois un peu plus massive et un peu plus petite qu'Uranus.</p>
-           </br> <center><img src="neptune.gif"  ></img></center>
-</br>
-		</div>
-<script type="text/javascript">
-$('#modal-3').cosyModal();
-</script>        
-</div>     
+    <div class="neptune"></div>
 </div>
-   
-   
+</div>
+
 </body>
-</html>    
+</html>
