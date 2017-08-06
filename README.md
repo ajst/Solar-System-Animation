@@ -5,5 +5,5 @@ Solar System CSS Animation
 - Fedi Fazaa
 - Yesser Ghiloufi
 
-###Encadré par
+### Encadré par
 - Wassim Grira (Animateur Informatique)
